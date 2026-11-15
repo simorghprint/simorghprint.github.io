@@ -1,154 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>چاپخانه سیمرغ | Chape Simorgh</title>
-<meta name="description" content="چاپخانه سیمرغ ملایر، چاپ بنر، ماگ، استیکر، کارت عروسی و خدمات چاپ با کیفیت">
-<meta name="keywords" content="چاپخانه سیمرغ, چاپ ملایر, Chape Simorgh, Simorgh Print, چاپ بنر">
+<meta name="description" content="چاپخانه سیمرغ ملایر؛ خدمات تخصصی چاپ بنر، ماگ، کارت عروسی، استیکر، صحافی و تیشرت">
+<meta name="theme-color" content="#101d38">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f6f7fa;color:#17233c}
-header{background:#101d38;color:white;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-.logo{font-size:25px;font-weight:bold;color:#e6bd65}
-nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
-button,.btn{border:0;border-radius:9px;padding:12px 18px;background:#d7ad55;color:#17233c;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
-.hero{text-align:center;padding:85px 15px;background:linear-gradient(135deg,#101d38,#263e68);color:white}
-.hero h1{font-size:36px;color:#edc66d}
-.hero p{line-height:2}
-section{padding:45px 6%;text-align:center}
-h2{color:#182b4b}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:25px}
-.service{background:white;border-radius:14px;padding:28px 15px;box-shadow:0 3px 15px #00000010}
-.service span{font-size:38px}
-.service h3{color:#b58b35}
-.about{background:white;line-height:2.2}
-.contact{background:#101d38;color:white}
-.contact h2{color:#edc66d}
-.contact a{margin:7px}
+:root{--navy:#101d38;--navy2:#263e68;--gold:#e6bd65;--paper:#f6f7fa;--ink:#17233c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:var(--navy);color:white;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #0002}
+.logo{font-size:23px;font-weight:bold;color:var(--gold)}nav{display:flex;flex-wrap:wrap;gap:7px}nav a{color:white;text-decoration:none;padding:8px;font-size:14px}
+button,.btn{border:0;border-radius:9px;padding:12px 18px;background:var(--gold);color:var(--navy);font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block;font-family:inherit}
+button:hover,.btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+.hero{text-align:center;padding:75px 15px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:white}
+.hero h1{font-size:clamp(29px,5vw,42px);color:var(--gold);margin:0 0 12px}.hero h2{color:white;font-size:clamp(20px,3vw,27px)}.hero p{line-height:2}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+section{padding:48px 6%;text-align:center}h2{color:#182b4b;margin-top:0}.lead{color:#647086;line-height:2}
+.services,.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:25px}
+.service,.work{background:white;border-radius:14px;overflow:hidden;box-shadow:0 3px 15px #00000010}
+.service{padding:24px 15px}.service .emoji{font-size:38px}.service h3{color:#b58b35}.service p{line-height:1.9;color:#647086;font-size:14px}
+.quote-link{font-size:13px;padding:10px 13px}
+.work-art{height:155px;display:grid;place-items:center;font-size:64px;color:white;background:linear-gradient(135deg,#243c65,#b58b35)}
+.work:nth-child(2) .work-art{background:linear-gradient(135deg,#9b6b4a,#e7c58c)}
+.work:nth-child(3) .work-art{background:linear-gradient(135deg,#385c78,#8fb7c8)}
+.work:nth-child(4) .work-art{background:linear-gradient(135deg,#70517e,#d59ab6)}
+.work:nth-child(5) .work-art{background:linear-gradient(135deg,#47634e,#a6bd8a)}
+.work:nth-child(6) .work-art{background:linear-gradient(135deg,#874e4e,#e3a06e)}
+.work h3{margin:13px 8px 16px;font-size:16px}
+.about{background:white;line-height:2.2}.contact{background:var(--navy);color:white}.contact h2{color:var(--gold)}.contact a{margin:7px}
+form{max-width:560px;margin:22px auto 0;background:white;padding:22px;border-radius:14px;box-shadow:0 3px 15px #00000010;text-align:right}
+input,textarea,select{width:100%;padding:13px;margin:7px 0 13px;border:1px solid #d9deea;border-radius:8px;font-family:inherit;font-size:14px;background:#fff}
+textarea{min-height:100px;resize:vertical}label{font-size:14px;font-weight:bold}small,.hint{color:#69758a;line-height:1.8;font-size:12px}
+.form-submit{width:100%;margin-top:12px;font-size:15px}
 footer{background:#091329;color:#ddd;text-align:center;padding:20px;font-size:13px}
-#english{display:none}
-input,textarea,select{width:100%;padding:13px;margin:7px 0;border:1px solid #ddd;border-radius:8px;font-family:inherit}
-form{max-width:500px;margin:20px auto;background:white;padding:22px;border-radius:14px}
+#english{display:none}body.en{direction:ltr}body.en form{text-align:left}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav{justify-content:center}.hero{padding:55px 15px}section{padding:38px 5%}.services,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.service{padding:20px 10px}}
 </style>
 </head>
 <body>
-
 <header>
 <div class="logo">چاپخانه سیمرغ</div>
-<nav>
-<a href="#home">خانه</a>
-<a href="#services">خدمات</a>
-<a href="#about">درباره ما</a>
-<a href="#contact">تماس</a>
-</nav>
-<button onclick="toggleLang()">English</button>
+<nav id="navFa"><a href="#home">خانه</a><a href="#services">خدمات</a><a href="#gallery">نمونه‌کارها</a><a href="#about">درباره ما</a><a href="#order">سفارش</a><a href="#contact">تماس</a></nav>
+<nav id="navEn" style="display:none"><a href="#english">Home</a><a href="#englishServices">Services</a><a href="#englishGallery">Portfolio</a><a href="#englishOrder">Order</a><a href="#englishContact">Contact</a></nav>
+<button type="button" onclick="toggleLang()">English / فارسی</button>
 </header>
 
-<div id="persian">
-<div class="hero" id="home">
-<h1>چاپخانه سیمرغ</h1>
-<h2 style="color:white">با ما یک قدم جلوتر باش</h2>
-<p>ارائه خدمات تخصصی چاپ با کیفیت عالی در ملایر</p>
-<a class="btn" href="#services">مشاهده خدمات</a>
-<a class="btn" href="#order">ثبت سفارش</a>
-</div>
+<main id="persian">
+<div class="hero" id="home"><h1>چاپخانه سیمرغ</h1><h2>با ما یک قدم جلوتر باش</h2><p>ارائه خدمات تخصصی چاپ با کیفیت عالی در ملایر</p><div class="actions"><a class="btn" href="#services">مشاهده خدمات</a><a class="btn" href="#order">ثبت سفارش</a></div></div>
 
-<section id="services">
-<h2>خدمات چاپخانه سیمرغ</h2>
+<section id="services"><h2>خدمات چاپخانه سیمرغ</h2><p class="lead">برای دریافت قیمت و زمان آماده‌سازی هر خدمت، درخواست خود را در واتساپ ارسال کنید.</p>
 <div class="services">
-<div class="service"><span>🖨️</span><h3>چاپ بنر</h3><p>چاپ بنر تبلیغاتی و مناسبتی</p></div>
-<div class="service"><span>☕</span><h3>چاپ ماگ</h3><p>چاپ عکس و طرح دلخواه روی ماگ</p></div>
-<div class="service"><span>💌</span><h3>کارت عروسی</h3><p>چاپ انواع کارت دعوت و عروسی</p></div>
-<div class="service"><span>🎨</span><h3>چاپ استیکر</h3><p>چاپ استیکر با کیفیت بالا</p></div>
-<div class="service"><span>📚</span><h3>صحافی و سیمی</h3><p>سیمی کردن جزوه و کتاب</p></div>
-<div class="service"><span>👕</span><h3>چاپ تیشرت</h3><p>چاپ طرح دلخواه روی تیشرت</p></div>
-</div>
-</section>
+<div class="service"><div class="emoji">🖨️</div><h3>چاپ بنر</h3><p>چاپ بنر تبلیغاتی و مناسبتی</p><button class="quote-link" onclick="quote('چاپ بنر')">استعلام قیمت در واتساپ</button></div>
+<div class="service"><div class="emoji">☕</div><h3>چاپ ماگ</h3><p>چاپ عکس و طرح دلخواه روی ماگ</p><button class="quote-link" onclick="quote('چاپ ماگ')">استعلام قیمت در واتساپ</button></div>
+<div class="service"><div class="emoji">💌</div><h3>کارت عروسی</h3><p>چاپ انواع کارت دعوت و عروسی</p><button class="quote-link" onclick="quote('کارت عروسی')">استعلام قیمت در واتساپ</button></div>
+<div class="service"><div class="emoji">🎨</div><h3>چاپ استیکر</h3><p>چاپ استیکر با کیفیت بالا</p><button class="quote-link" onclick="quote('چاپ استیکر')">استعلام قیمت در واتساپ</button></div>
+<div class="service"><div class="emoji">📚</div><h3>صحافی و سیمی</h3><p>سیمی کردن جزوه و کتاب</p><button class="quote-link" onclick="quote('صحافی و سیمی')">استعلام قیمت در واتساپ</button></div>
+<div class="service"><div class="emoji">👕</div><h3>چاپ تیشرت</h3><p>چاپ طرح دلخواه روی تیشرت</p><button class="quote-link" onclick="quote('چاپ تیشرت')">استعلام قیمت در واتساپ</button></div>
+</div></section>
 
-<section class="about" id="about">
-<h2>درباره چاپخانه سیمرغ</h2>
-<p>چاپخانه سیمرغ با بیش از ۲۰ سال سابقه فعالیت، ارائه‌دهنده خدمات متنوع چاپ با کیفیت و دقت بالا در خدمت مشتریان عزیز است.</p>
-<p>ملایر، میدان امام خمینی</p>
-</section>
+<section id="gallery"><h2>گالری نمونه‌کارها</h2><p class="lead">تصاویر زیر فعلاً نمایشی هستند و بعداً می‌توانیم آن‌ها را با عکس محصولات واقعی چاپخانه جایگزین کنیم.</p>
+<div class="gallery">
+<div class="work"><div class="work-art">🪪</div><h3>کارت ویزیت</h3></div>
+<div class="work"><div class="work-art">🖼️</div><h3>بنر و چاپ عریض</h3></div>
+<div class="work"><div class="work-art">📄</div><h3>تراکت و بروشور</h3></div>
+<div class="work"><div class="work-art">☕</div><h3>ماگ تبلیغاتی</h3></div>
+<div class="work"><div class="work-art">💌</div><h3>کارت دعوت</h3></div>
+<div class="work"><div class="work-art">👕</div><h3>چاپ روی پوشاک</h3></div>
+</div></section>
 
-<section id="order">
-<h2>درخواست سفارش</h2>
+<section class="about" id="about"><h2>درباره چاپخانه سیمرغ</h2><p>چاپخانه سیمرغ با بیش از ۲۰ سال سابقه فعالیت، ارائه‌دهنده خدمات متنوع چاپ با کیفیت و دقت بالا در خدمت مشتریان عزیز است.</p><p>ملایر، میدان امام خمینی</p></section>
+
+<section id="order"><h2>درخواست سفارش و استعلام قیمت</h2><p class="lead">اطلاعات زیر را وارد کنید تا پیام سفارش در واتساپ آماده شود. قیمت نهایی پس از بررسی جزئیات اعلام می‌شود.</p>
 <form onsubmit="sendOrder(event)">
-<input id="name" placeholder="نام و نام خانوادگی" required>
-<input id="phone" placeholder="شماره تماس" required>
-<select id="service">
-<option>چاپ بنر</option>
-<option>چاپ ماگ</option>
-<option>کارت عروسی</option>
-<option>چاپ استیکر</option>
-<option>صحافی و سیمی</option>
-<option>چاپ تیشرت</option>
-</select>
-<textarea id="details" placeholder="توضیحات سفارش"></textarea>
-<button type="submit">ارسال سفارش در واتساپ</button>
-</form>
-</section>
+<label for="name">نام و نام خانوادگی *</label><input id="name" autocomplete="name" placeholder="نام و نام خانوادگی" required>
+<label for="phone">شماره تماس *</label><input id="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="شماره تماس" required>
+<label for="service">نوع خدمات</label><select id="service"><option>چاپ بنر</option><option>چاپ ماگ</option><option>کارت عروسی</option><option>چاپ استیکر</option><option>صحافی و سیمی</option><option>چاپ تیشرت</option><option>سایر خدمات</option></select>
+<label for="quantity">تعداد / تیراژ (اختیاری)</label><input id="quantity" placeholder="مثلاً ۱۰۰ عدد">
+<label for="details">ابعاد و توضیحات سفارش</label><textarea id="details" placeholder="ابعاد، جنس، تعداد، زمان موردنیاز و توضیحات دیگر"></textarea>
+<label for="file">فایل یا تصویر طرح (اختیاری)</label><input id="file" type="file" accept="image/*,.pdf,.ai,.psd,.cdr">
+<p class="hint">نکته: پس از باز شدن واتساپ، فایل انتخاب‌شده را در صورت نیاز به‌صورت دستی به گفتگو پیوست کنید؛ فایل از طریق این فرم خودکار ارسال نمی‌شود.</p>
+<button class="form-submit" type="submit">ارسال درخواست در واتساپ</button>
+</form></section>
 
-<section class="contact" id="contact">
-<h2>ارتباط با چاپخانه سیمرغ</h2>
-<p>ملایر، میدان امام خمینی</p>
-<a class="btn" href="tel:09189023896">تماس اول</a>
-<a class="btn" href="tel:09183090630">تماس دوم</a>
-<a class="btn" href="https://wa.me/989189023896">واتساپ اول</a>
-<a class="btn" href="https://wa.me/989183090630">واتساپ دوم</a>
-</section>
-</div>
+<section class="contact" id="contact"><h2>ارتباط با چاپخانه سیمرغ</h2><p>ملایر، میدان امام خمینی</p><a class="btn" href="tel:09189023896">تماس اول</a><a class="btn" href="tel:09183090630">تماس دوم</a><a class="btn" href="https://wa.me/989189023896">واتساپ اول</a><a class="btn" href="https://wa.me/989183090630">واتساپ دوم</a></section>
+</main>
 
-<div id="english">
-<div class="hero">
-<h1>Chape Simorgh</h1>
-<h2 style="color:white">One Step Ahead With Us</h2>
-<p>Professional Printing Services in Malayer, Iran</p>
-<a class="btn" href="#englishServices">Our Services</a>
-</div>
-<section id="englishServices">
-<h2>Our Services</h2>
-<div class="services">
-<div class="service"><span>🖨️</span><h3>Banner Printing</h3></div>
-<div class="service"><span>☕</span><h3>Custom Mug Printing</h3></div>
-<div class="service"><span>💌</span><h3>Wedding Invitations</h3></div>
-<div class="service"><span>🎨</span><h3>Sticker Printing</h3></div>
-<div class="service"><span>📚</span><h3>Binding Services</h3></div>
-<div class="service"><span>👕</span><h3>T-shirt Printing</h3></div>
-</div>
-</section>
-<section class="about">
-<h2>About Us</h2>
-<p>Chape Simorgh has over 20 years of experience in professional printing services.</p>
-<p>Imam Khomeini Square, Malayer, Iran</p>
-</section>
-<section class="contact">
-<h2>Contact Us</h2>
-<a class="btn" href="tel:09189023896">Call Us 1</a>
-<a class="btn" href="tel:09183090630">Call Us 2</a>
-<a class="btn" href="https://wa.me/989189023896">WhatsApp</a>
-<a class="btn" href="https://wa.me/989183090630">WhatsApp</a>
-</section>
-</div>
-
+<main id="english">
+<div class="hero"><h1>Chape Simorgh</h1><h2>One Step Ahead With Us</h2><p>Professional Printing Services in Malayer, Iran</p><div class="actions"><a class="btn" href="#englishServices">Our Services</a><a class="btn" href="#englishOrder">Request a Quote</a></div></div>
+<section id="englishServices"><h2>Our Services</h2><div class="services">
+<div class="service"><div class="emoji">🖨️</div><h3>Banner Printing</h3><button class="quote-link" onclick="quote('Banner Printing')">Request a quote</button></div>
+<div class="service"><div class="emoji">☕</div><h3>Custom Mug Printing</h3><button class="quote-link" onclick="quote('Custom Mug Printing')">Request a quote</button></div>
+<div class="service"><div class="emoji">💌</div><h3>Wedding Invitations</h3><button class="quote-link" onclick="quote('Wedding Invitations')">Request a quote</button></div>
+<div class="service"><div class="emoji">🎨</div><h3>Sticker Printing</h3><button class="quote-link" onclick="quote('Sticker Printing')">Request a quote</button></div>
+<div class="service"><div class="emoji">📚</div><h3>Binding Services</h3><button class="quote-link" onclick="quote('Binding Services')">Request a quote</button></div>
+<div class="service"><div class="emoji">👕</div><h3>T-shirt Printing</h3><button class="quote-link" onclick="quote('T-shirt Printing')">Request a quote</button></div>
+</div></section>
+<section id="englishGallery"><h2>Portfolio Preview</h2><p class="lead">These are temporary visual placeholders. Replace them with real print-shop photos when available.</p><div class="gallery"><div class="work"><div class="work-art">🪪</div><h3>Business Cards</h3></div><div class="work"><div class="work-art">🖼️</div><h3>Banners</h3></div><div class="work"><div class="work-art">📄</div><h3>Flyers & Brochures</h3></div><div class="work"><div class="work-art">☕</div><h3>Custom Mugs</h3></div></div></section>
+<section class="about"><h2>About Us</h2><p>Chape Simorgh has over 20 years of experience in professional printing services.</p><p>Imam Khomeini Square, Malayer, Iran</p></section>
+<section id="englishOrder"><h2>Request an Order / Quote</h2><form onsubmit="sendOrder(event)"><label for="nameEn">Full name *</label><input id="nameEn" required placeholder="Full name"><label for="phoneEn">Phone number *</label><input id="phoneEn" type="tel" required placeholder="Phone number"><label for="serviceEn">Service</label><select id="serviceEn"><option>Banner Printing</option><option>Custom Mug Printing</option><option>Wedding Invitations</option><option>Sticker Printing</option><option>Binding Services</option><option>T-shirt Printing</option></select><label for="detailsEn">Details</label><textarea id="detailsEn" placeholder="Size, quantity and other details"></textarea><button class="form-submit" type="submit">Send request via WhatsApp</button></form></section>
+<section class="contact" id="englishContact"><h2>Contact Us</h2><p>Imam Khomeini Square, Malayer, Iran</p><a class="btn" href="tel:09189023896">Call Us 1</a><a class="btn" href="tel:09183090630">Call Us 2</a><a class="btn" href="https://wa.me/989189023896">WhatsApp</a></section>
+</main>
 <footer>© Chape Simorgh | چاپخانه سیمرغ</footer>
-
 <script>
+const WA_NUMBER="989189023896";
 function toggleLang(){
-let p=document.getElementById('persian');
-let e=document.getElementById('english');
-let english=e.style.display==='none';
-e.style.display=english?'block':'none';
-p.style.display=english?'none':'block';
-document.documentElement.lang=english?'en':'fa';
-document.documentElement.dir=english?'ltr':'rtl';
+ const p=document.getElementById('persian'),e=document.getElementById('english');
+ const toEnglish=e.style.display==='none';
+ e.style.display=toEnglish?'block':'none';p.style.display=toEnglish?'none':'block';
+ document.getElementById('navFa').style.display=toEnglish?'none':'flex';
+ document.getElementById('navEn').style.display=toEnglish?'flex':'none';
+ document.documentElement.lang=toEnglish?'en':'fa';document.documentElement.dir=toEnglish?'ltr':'rtl';
+ document.body.classList.toggle('en',toEnglish);window.scrollTo(0,0);
 }
+function openWhatsApp(message){window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(message),'_blank','noopener');}
+function quote(service){openWhatsApp('سلام، لطفاً قیمت و شرایط انجام این خدمت را اعلام کنید.\nخدمت موردنظر: '+service+'\nممنونم.');}
 function sendOrder(event){
-event.preventDefault();
-let msg="سلام، درخواست سفارش از سایت چاپخانه سیمرغ\nنام: "+document.getElementById('name').value+"\nتلفن: "+document.getElementById('phone').value+"\nخدمت: "+document.getElementById('service').value+"\nتوضیحات: "+document.getElementById('details').value;
-window.open("https://wa.me/989189023896?text="+encodeURIComponent(msg),"_blank");
+ event.preventDefault();
+ const english=document.getElementById('english').style.display==='block';
+ const name=document.getElementById(english?'nameEn':'name').value.trim();
+ const phone=document.getElementById(english?'phoneEn':'phone').value.trim();
+ const service=document.getElementById(english?'serviceEn':'service').value;
+ const details=document.getElementById(english?'detailsEn':'details').value.trim();
+ const quantity=english?'':document.getElementById('quantity').value.trim();
+ if(!name||!phone){alert(english?'Please enter your name and phone number.':'لطفاً نام و شماره تماس را وارد کنید.');return;}
+ let msg=english?'Hello, I would like to request a quote from Chape Simorgh.':'سلام، درخواست سفارش و استعلام قیمت از سایت چاپخانه سیمرغ دارم.';
+ msg+='\n'+(english?'Name: ':'نام: ')+name+'\n'+(english?'Phone: ':'تلفن: ')+phone+'\n'+(english?'Service: ':'خدمت: ')+service;
+ if(quantity)msg+='\nتعداد/تیراژ: '+quantity;
+ if(details)msg+='\n'+(english?'Details: ':'توضیحات: ')+details;
+ msg+='\n'+(english?'Please let me know the price and delivery time.':'لطفاً قیمت و زمان آماده‌سازی را اعلام کنید.');
+ openWhatsApp(msg);
 }
 </script>
 </body>
